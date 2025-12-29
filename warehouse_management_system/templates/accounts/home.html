@@ -1,0 +1,46 @@
+{% extends "accounts/base.html" %} {% block body-block %}
+<div class="min-h-screen bg-slate-100 py-12 px-4">
+  <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-md p-8">
+    <h1 class="text-3xl font-semibold text-slate-800 mb-4">
+      Accounts Application
+    </h1>
+
+    <p class="text-slate-600 mb-8">
+      This is the Home page of the Accounts application. Below is a list of
+      available routes for development and testing.
+    </p>
+
+    <div class="space-y-6">
+      <div>
+        <h3 class="text-lg font-medium text-slate-700 mb-2">Accessible URLs</h3>
+
+        <ul class="divide-y divide-slate-200 border rounded-md">
+          <li class="px-4 py-3 flex justify-between">
+            <span class="font-mono text-slate-700">admin/</span>
+            <span class="text-slate-500">Django admin</span>
+          </li>
+
+          <li class="px-4 py-3 flex justify-between">
+            <span class="font-mono text-slate-700">home/</span>
+            <span class="text-slate-500">Base layout</span>
+          </li>
+
+          <li class="px-4 py-3 flex justify-between">
+            <span class="font-mono text-slate-700">accounts/registration/</span>
+            <span class="text-slate-500">Registration page</span>
+          </li>
+
+          <li class="px-4 py-3 flex justify-between">
+            <span class="font-mono text-slate-700">accounts/login/</span>
+            <span class="text-slate-500">Login page</span>
+          </li>
+          <li class="px-4 py-3 flex justify-between">
+            <span class="font-mono text-slate-700">logout/</span>
+            <span class="text-slate-500">Logout</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

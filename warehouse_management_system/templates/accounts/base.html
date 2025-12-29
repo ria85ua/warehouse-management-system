@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Warehouse</title>
+  </head>
+  <body>
+    <div>
+      <nav class="flex items-center justify-between bg-slate-800 px-6 py-4">
+        <div>
+          <a href="{% url 'home' %}" class="text-xl font-semibold text-white"
+            >Warehouse</a
+          >
+        </div>
+
+        <ul class="flex gap-6">
+          {% if user.is_authenticated %}
+          <li>
+            <a
+              href="{% url 'user_logout' %}"
+              class="text-white hover:text-slate-300"
+              >Logout</a
+            >
+          </li>
+
+          <li class="text-white hover:text-slate-300">
+            User: {{ user.username }}
+          </li>
+
+          {% else %}
+          <li>
+            <a
+              href="{% url 'accounts:user_login' %}"
+              class="text-white hover:text-slate-300"
+              >Login</a
+            >
+          </li>
+          <li>
+            <a
+              href="{% url 'accounts:registration' %}"
+              class="text-white hover:text-slate-300"
+              >Registration</a
+            >
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
+    {% block body-block %} {% endblock %}
+  </body>
+</html>
